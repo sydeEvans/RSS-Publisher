@@ -21,7 +21,8 @@
     "format:check": "eslint \"**/*.{js,yml}\" && prettier-check \"**/*.{js,json}\"",
     "test": "npm run format:check && cross-env NODE_ENV=test jest --coverage --runInBand --forceExit",
     "jest": "cross-env NODE_ENV=test jest --runInBand --forceExit",
-    "jest:watch": "cross-env NODE_ENV=test jest --watch"
+    "jest:watch": "cross-env NODE_ENV=test jest --watch",
+    "pushDingding": "node lib/publisher/index.js"
   },
   "repository": {
     "type": "git",
@@ -30,8 +31,7 @@
   "keywords": [
     "RSS"
   ],
-  "gitHooks": {
-  },
+  "gitHooks": {},
   "author": "DIYgod",
   "license": "MIT",
   "bugs": {
@@ -81,6 +81,7 @@
     "@sentry/node": "6.19.3",
     "aes-js": "3.1.2",
     "art-template": "4.13.2",
+    "axios": "^0.26.1",
     "bbcodejs": "0.0.4",
     "cheerio": "1.0.0-rc.10",
     "chrono-node": "2.3.8",
